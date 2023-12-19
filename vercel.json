@@ -1,5 +1,5 @@
 {
-    "name": "the-bitpay-capital-back-end",
+    "name": "new-bit-pay-back-end-zefw",
     "builds": [
       {
         "src": "server.js",
