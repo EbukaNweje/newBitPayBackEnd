@@ -338,7 +338,7 @@ exports.signupEmailSand = async (req, res, next) =>{
         <tr>
           <td>
             <div style="padding: 0 1.5em; text-align: center;">
-              <h3 style="font-family: 'Lato', sans-serif; color: black; font-size: 30px; margin-bottom: 0; font-weight: 400;">Hi ${UserEmail.userName}!</h3>
+              <h3 style="font-family: 'Lato', sans-serif; color: black; font-size: 30px; margin-bottom: 0; font-weight: 400;">Hi ${UserEmail.fullName}!</h3>
               <h4 style="font-family: 'Lato', sans-serif; font-size: 24px; font-weight: 300;">Welcome to Bitpay Capital , your Number 1 online trading platform.</h4>
               <span>
                 Your Trading account has been set up successfully 
@@ -384,11 +384,16 @@ exports.signupEmailSand = async (req, res, next) =>{
     to: process.env.USER, 
     subject: "Successful Registration",
   html: `
+   <span>Hi Admin This user with this Information</span>
    <p>
-      ${UserEmail.userName} <br>
-      ${UserEmail.email}  <br>
-        Just signed up now on your Platfrom 
+    FullName: ${UserEmail.fullName} <br>
+    Email:  ${UserEmail.email}  <br>
+    Phone Number: ${UserEmail.phoneNumber}  <br>
+    Gender:  ${UserEmail.gender}  <br>
+    Country:  ${UserEmail.country}  <br>
+    Address:  ${UserEmail.address}  <br>
    </p>
+   <span> Just signed up now on your Platfrom </span>
     `,
 }
   
