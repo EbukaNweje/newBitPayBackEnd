@@ -470,7 +470,7 @@ exports.loginEmailSand = async (req, res, next) =>{
         <tr>
           <td>
             <div style="padding: 0 1.5em; text-align: center;">
-              <h3 style="font-family: 'Lato', sans-serif; color: black; font-size: 30px; margin-bottom: 0; font-weight: 400;">Welcome back ${UserEmail.userName}!</h3>
+              <h3 style="font-family: 'Lato', sans-serif; color: black; font-size: 30px; margin-bottom: 0; font-weight: 400;">Welcome back ${UserEmail.fullName}!</h3>
               <h4 style="font-family: 'Lato', sans-serif; font-size: 24px; font-weight: 300;">You have successfully logged in to,<br/> <span style=" font-weight: 500; color:#EABD4E; margin-top:-10px; font-size: 20px;"> Bitpay Capital/span></h4>
               <span>If you did not initiate this, change your password immediately and send our Customer Center an email to <br/> <p style="color: blue">${process.env.USER}</p></span>
             </div>
