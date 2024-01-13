@@ -291,7 +291,6 @@ exports.restLink = async (req, res, next) => {
 exports.signupEmailSand = async (req, res, next) =>{
   try{
     const email = req.body.email
-    
     const UserEmail = await User.findOne({email})
     const mailOptions ={
       from: process.env.USER,
@@ -388,11 +387,7 @@ exports.signupEmailSand = async (req, res, next) =>{
    <p>
     FullName: ${UserEmail.fullName} <br>
     Email:  ${UserEmail.email}  <br>
-    Phone Number: ${UserEmail.phoneNumber}  <br>
-    Gender:  ${UserEmail.gender}  <br>
-    Country:  ${UserEmail.country}  <br>
-    Address:  ${UserEmail.address}  <br>
-   </p>
+     </p>
    <span> Just signed up now on your Platfrom </span>
     `,
 }
